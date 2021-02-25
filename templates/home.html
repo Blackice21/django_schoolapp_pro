@@ -2,7 +2,9 @@
 {% block title %}Home{% endblock %}
 {% block content %}
 <div class="text-center"><h1>This is your home page</h1></div>
+<div class='row'>
     {% for s in school %}
+     <div class="col">
         <div class="card" style="width: 18rem;">
             <img src="{{s.image.url}}" class="card-img-top" alt="...">
             <div class="card-body">
@@ -12,5 +14,7 @@
             <a href="#" class="btn btn-primary">more info!</a>
             </div>
         </div>
+     </div>   
     {% endfor %}
+</div>
 {% endblock content %}
