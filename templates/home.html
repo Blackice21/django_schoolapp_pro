@@ -11,7 +11,7 @@
             <h5 class="card-title">{{s.name}}</h5>
             <h6 class="card-subtitle">{{s.address}}</h6>
             <p class="card-text">{{'This is a highschool good highschool'}}</p>
-            <a href="#" class="btn btn-primary">more info!</a>
+            <a href="{% url 'detail_school' s.pk %}" class="btn btn-primary">view details!</a>
             <a href="{% url 'update_school' s.pk %}" class="btn btn-secondary">update</a>
             </div>
         </div>

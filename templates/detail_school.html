@@ -1,0 +1,8 @@
+{% extends 'base.html' %}
+{% block title %}details{%endblock title%}
+{% block content %}
+<div class="text-center"><h1>This is {{school.name}}!</h1></div>
+<h4 class="text-center">located on: {{school.address}}</h4>
+<div style="padding-left:3.5in;"> <img src="{{school.image.url}}" alt=""></div>
+<p>{{school.name}} high school enrolls more than 500 students from grades nine through 12. Located in Cicero, Ill., it is a part of J. Sterling Morton High School District. Approved by the North Central Association and Illinois State Board of Education, Morton East High employs more than 50 traditional and special education teachers, social workers, paraprofessionals, guidance counselors, night custodians, and administrative and support staff. Its students participate in various programs, including recycling program, thanksgiving food drive, operation Christmas child, eagle choir, student and soldier pen pals, Tsunami relief fund and student cancer fund. The school also offers Tribes curriculum, class and grade level team newsletters, electronic building resources, Internet software programs, family activity nights, parent informational meetings, reading and mathematics groups, and vocal and instrumental music programs</p>
+{% endblock content %}

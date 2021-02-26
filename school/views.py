@@ -35,4 +35,8 @@ def update_school(request, pk):
         form = Schoolform(request.POST, request.FILES, instance=school)
         form.save()
         return redirect('home')
+
+def detail_school(request, pk):
+    school = get_object_or_404(School,pk=pk)
+    return render(request, 'detail_school.html',{'school': school})
     
