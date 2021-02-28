@@ -39,4 +39,10 @@ def update_school(request, pk):
 def detail_school(request, pk):
     school = get_object_or_404(School,pk=pk)
     return render(request, 'detail_school.html',{'school': school})
+
+def delete_school(request, pk):
+    school = get_object_or_404(School, pk=pk)
+    school.delete()
+    return redirect('home')
+
     

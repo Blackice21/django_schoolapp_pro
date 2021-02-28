@@ -1,18 +1,23 @@
 {% extends 'base.html' %}
 {% block title %}Home{% endblock %}
 {% block content %}
-<div class="text-center"><h1>This is your home page</h1></div>
+<div class="text-center">
+    <h1>This is your home page</h1>
+    <a href="{% url 'create_school'%}"><button class="btn btn-primary">add a school</button></a>
+</div>
 <div class='row'>
     {% for s in school %}
-     <div class="col">
+     <div class="col-4">
         <div class="card" style="width: 18rem;">
             <img src="{{s.image.url}}" class="card-img-top" alt="...">
             <div class="card-body">
             <h5 class="card-title">{{s.name}}</h5>
             <h6 class="card-subtitle">{{s.address}}</h6>
-            <p class="card-text">{{'This is a highschool good highschool'}}</p>
+            <p class="card-text">{{'This is a good highschool.'}}</p>
             <a href="{% url 'detail_school' s.pk %}" class="btn btn-primary">view details!</a>
             <a href="{% url 'update_school' s.pk %}" class="btn btn-secondary">update</a>
+            <a href="{% url 'delete_school' s.pk %}" class="btn btn-danger">delete</a>
+
             </div>
         </div>
      </div>   
